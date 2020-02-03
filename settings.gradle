@@ -1,0 +1,2 @@
+include ':app', ':dfm'
+rootProject.name='Dynamic Delivery Test'

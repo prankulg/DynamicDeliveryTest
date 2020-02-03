@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.prankul.dfm">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_dfm">
+        <dist:delivery>
+            <dist:on-demand />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+        <activity android:name=".DFMLaunchingActivity" />
+
+        <provider
+            android:name="com.prankul.dfm.DFMContentProvider"
+            android:authorities="com.prankul.dfm.DFMContentProvider"
+            android:exported="false"
+            android:label="DFMContentProvider" />
+    </application>
+</manifest>
+
